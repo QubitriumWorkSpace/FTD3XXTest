@@ -90,8 +90,8 @@ int main() {
             ftStatus = FT_WritePipe(ftHandle, 0x02, (PUCHAR)data, bytesToWrite, &bytesWritten, NULL);
             if (ftStatus != FT_OK || bytesWritten != bytesToWrite) {
                 std::cerr << "Failed to write data to the pipe" << std::endl;
-                FT_Close(ftHandle);
-                return 1;
+                //FT_Close(ftHandle);
+                //continue;
             }
             else
             {
@@ -146,7 +146,7 @@ int main() {
                     << std::endl;
             }
         }
-#pragma endregion
+#pragma endregion   
 
 
     }
